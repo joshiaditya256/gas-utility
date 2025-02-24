@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Gas Utility Service{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="mt-4">Welcome to Gas Utility Service</h1>
+    <p class="lead">Easily submit and track your service requests online.</p>
+
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Submit a Service Request</h5>
+                    <p class="card-text">Report issues or request gas-related services easily.</p>
+                    <a href="{% url 'customer_service:submit_request' %}" class="btn btn-primary">Submit Request</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Track Your Request</h5>
+                    <p class="card-text">Check the status of your submitted requests.</p>
+                    <a href="{% url 'customer_service:track_request' %}" class="btn btn-success">Track Request</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5 class="card-title">View Account Info</h5>
+                    <p class="card-text">Manage your account details and service history.</p>
+                    <a href="{% url 'customer_service:account_info' %}" class="btn btn-warning">Account Info</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
